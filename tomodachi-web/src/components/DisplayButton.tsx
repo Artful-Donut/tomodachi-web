@@ -1,29 +1,24 @@
-import DisplayButton from "./DisplayButton";
-
-type CustomizeButtonProps = {
+type DisplayButtonProps = {
     iconsrc: string;
     numberid: number
 }
 
-
-function CustomizeButton({iconsrc, numberid}: CustomizeButtonProps) {
+function DisplayButton({iconsrc, numberid}: DisplayButtonProps) {
 
     return(
         <>
         <button
             type="button"
             onClick={() => alert(numberid)}
-            className="bg-yellow-500 h-20 w-20"
+            className="bg-gray-500 h-40 w-40"
         >
             <img src={iconsrc}></img>
             
         </button>
-        
-        
 
         </>
     )
 
 }
 
-export default CustomizeButton
+export default DisplayButton

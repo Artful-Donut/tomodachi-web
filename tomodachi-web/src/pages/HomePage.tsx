@@ -13,12 +13,15 @@ function HomePage() {
     });
 
     const [bubbleHidden, setBubbleHidden] = useState(false);
+    const [showMessage, setShowMessage] = useState(true);
         const dialog = [
             "Hiii",
             "Byee!!!",
             "Heyyy!!",
             "Goodbye!"
         ];
+
+        const toggleMessage = () => setShowMessage((prev) => !prev)
 
     return(
         <>
@@ -36,16 +39,21 @@ function HomePage() {
             
         </div>
 
-        {/*<div className="creature-box bg-blue-500 border h-50 w-50 mt-25 ml-95">
-            <div className="creature-itself text-black">
-                WEEZ CREATURE BOX
-            </div>
-        </div>*/}
 
+        <button
+            onClick={toggleMessage}
+            className="absolute items-center justify-center bg-white rounded-full h-24 w-24 mt-12 text-bold text-4xl"
+        >
+            !!!
+        </button>
         <div className="mt-30 ml-85">
             <WheezCanvas></WheezCanvas>
         </div>
-        
+        {showMessage && (
+            <div className="absolute bg-white text-black rounded-full border ml-36 w-150 h-12 text-bold">
+                I AM BEING NEGLECTED, I WILL CALL THE POLICE IF YOU DON'T FEED ME!!!
+            </div>
+        )}
 
         <div className="">
             <SpeechBubble 
