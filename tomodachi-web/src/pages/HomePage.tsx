@@ -1,6 +1,7 @@
 import AddWeezButton from "../components/AddWeezButton"
 import React, { useLayoutEffect, useState } from 'react';
 import SpeechBubble from "../components/dialog-system/SpeechBubble";
+import WheezCanvas from "../components/weez/WheezCanvas";
 
 
 function HomePage() {
@@ -18,8 +19,7 @@ function HomePage() {
 
     return(
         <>
-        
-        
+        <WheezCanvas />
 
         <div className="mt-10">
             <div className="text-black text-5xl">Welcome home!</div>
