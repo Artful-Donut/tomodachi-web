@@ -1,4 +1,11 @@
+import React, { useLayoutEffect } from 'react';
+
 function AddWeez() {
+
+    useLayoutEffect(() => {
+                document.body.style.backgroundColor = "red"
+        });
+
     return(
         <>
         <div>
