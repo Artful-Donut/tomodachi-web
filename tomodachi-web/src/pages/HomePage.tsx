@@ -23,7 +23,7 @@ function HomePage() {
 
         <div className="creature-box bg-blue-500 border h-50 w-50 mt-25 ml-95">
             <div className="creature-itself text-black">
-            WEEZ CREATURE BOX
+                WEEZ CREATURE BOX
             </div>
         </div>
 
