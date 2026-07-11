@@ -6,7 +6,7 @@ function AddWeezButton() {
     const navigate = useNavigate();
     return(
         <button
-            className="bg-red-300"
+            className="bg-red-500 h-15 w-25 text-black"
             type="button"
             onClick={() => {
                navigate('/addweez')

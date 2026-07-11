@@ -28,9 +28,9 @@ function HomePage() {
             style={{backgroundImage: `url(${backgroundPicture})`}}>
 
         <div className="mt-10">
-            <div className="text-black text-4xl">Welcome home!</div>
+            <div className="text-black text-4xl">WELCOME HOME</div>
 
-            <div className="mt-10">
+            <div className="mt-10 ml-140">
                 <AddWeezButton></AddWeezButton>
             </div>
             
@@ -42,7 +42,7 @@ function HomePage() {
             </div>
         </div>*/}
 
-        <div className="mt-20 ml-85">
+        <div className="mt-30 ml-85">
             <WheezCanvas></WheezCanvas>
         </div>
         

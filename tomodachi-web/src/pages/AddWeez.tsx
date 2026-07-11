@@ -11,7 +11,7 @@ import noseIcon from '../assets/drawnAssets/noseButton.png';
 function AddWeez() {
 
     useLayoutEffect(() => {
-                document.body.style.backgroundColor = "red"
+                document.body.style.backgroundColor = "green"
     });
 
     
