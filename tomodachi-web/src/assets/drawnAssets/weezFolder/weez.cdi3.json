@@ -27,16 +27,6 @@
 			"Name": "EyeL Smile"
 		},
 		{
-			"Id": "ParamEyeROpen",
-			"GroupId": "",
-			"Name": "EyeR Open"
-		},
-		{
-			"Id": "ParamEyeRSmile",
-			"GroupId": "",
-			"Name": "EyeR Smile"
-		},
-		{
 			"Id": "ParamBrowLY",
 			"GroupId": "",
 			"Name": "BrowL Y"
