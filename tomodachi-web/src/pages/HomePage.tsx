@@ -1,5 +1,6 @@
 import AddWeezButton from "../components/AddWeezButton"
-import React, { useLayoutEffect } from 'react';
+import React, { useLayoutEffect, useState } from 'react';
+import SpeechBubble from "../components/dialog-system/SpeechBubble";
 
 
 function HomePage() {
@@ -8,8 +9,16 @@ function HomePage() {
             document.body.style.backgroundColor = "turquoise"
     });
 
+    const [bubbleHidden, setBubbleHidden] = useState(false);
+        const dialog = [
+            "Hiii",
+            "Byee!!!",
+            "Heyyy!!"
+        ];
+
     return(
         <>
+        
         
 
         <div className="mt-10">
@@ -26,6 +35,14 @@ function HomePage() {
                 WEEZ CREATURE BOX
             </div>
         </div>
+
+        <SpeechBubble 
+            isHidden={bubbleHidden}
+            setIsHidden={() => setBubbleHidden(true)}
+            dialog={dialog}
+            speed={40}
+        >
+        </SpeechBubble>
 
 
         </>

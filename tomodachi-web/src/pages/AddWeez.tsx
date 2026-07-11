@@ -12,20 +12,26 @@ function AddWeez() {
 
     useLayoutEffect(() => {
                 document.body.style.backgroundColor = "red"
-        });
+    });
+
+    
 
     return(
         <>
-        <div className="justify-center space-x-5">
-            
-            <CustomizeButton iconsrc={browsIcon}></CustomizeButton>
-            <CustomizeButton iconsrc={clothesIcon}></CustomizeButton>
-            <CustomizeButton iconsrc={eyeIcon}></CustomizeButton>
-            <CustomizeButton iconsrc={hairIcon}></CustomizeButton>
-            <CustomizeButton iconsrc={mouthIcon}></CustomizeButton>
-            <CustomizeButton iconsrc={noseIcon}></CustomizeButton>
 
+        <div className="justify-center space-x-5">
+            <CustomizeButton iconsrc={browsIcon} numberid={1}></CustomizeButton>
+            <CustomizeButton iconsrc={clothesIcon} numberid={2}></CustomizeButton>
+            <CustomizeButton iconsrc={eyeIcon} numberid={3}></CustomizeButton>
+            <CustomizeButton iconsrc={hairIcon} numberid={4}></CustomizeButton>
+            <CustomizeButton iconsrc={mouthIcon} numberid={5}></CustomizeButton>
+            <CustomizeButton iconsrc={noseIcon} numberid={6}></CustomizeButton>
         </div>
+
+        
+        
+
+
         </>
     )
     
