@@ -8,8 +8,9 @@ function WheezCanvas() {
             modelJsonPath={modelJsonUrl} coreScriptSrc="/live2dcubismcore.min.js"
             renderOptions={{
                 fitMode:'height',
-                anchorY: 'bottom'
-            }}>
+                anchorY: 'bottom',
+            }}
+            idleMotionGroup=''>
         </Live2D>
 
     )
