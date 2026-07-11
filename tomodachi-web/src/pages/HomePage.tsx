@@ -22,7 +22,7 @@ function HomePage() {
         
 
         <div className="mt-10">
-            <div className="text-black text-5xl">Welcome home!</div>
+            <div className="text-black text-5xl">WELCOME HOME</div>
 
             <div className="mt-10">
                 <AddWeezButton></AddWeezButton>
