@@ -1,0 +1,192 @@
+{
+	"Version": 3,
+	"Parameters": [
+		{
+			"Id": "ParamAngleX",
+			"GroupId": "",
+			"Name": "Angle X"
+		},
+		{
+			"Id": "ParamAngleY",
+			"GroupId": "",
+			"Name": "Angle Y"
+		},
+		{
+			"Id": "ParamAngleZ",
+			"GroupId": "",
+			"Name": "Angle Z"
+		},
+		{
+			"Id": "ParamEyeLOpen",
+			"GroupId": "",
+			"Name": "EyeL Open"
+		},
+		{
+			"Id": "ParamEyeLSmile",
+			"GroupId": "",
+			"Name": "EyeL Smile"
+		},
+		{
+			"Id": "ParamEyeROpen",
+			"GroupId": "",
+			"Name": "EyeR Open"
+		},
+		{
+			"Id": "ParamEyeRSmile",
+			"GroupId": "",
+			"Name": "EyeR Smile"
+		},
+		{
+			"Id": "ParamBrowLY",
+			"GroupId": "",
+			"Name": "BrowL Y"
+		},
+		{
+			"Id": "ParamBrowRY",
+			"GroupId": "",
+			"Name": "BrowR Y"
+		},
+		{
+			"Id": "ParamMouthOpenY",
+			"GroupId": "",
+			"Name": "Mouth Open"
+		},
+		{
+			"Id": "ParamBreath",
+			"GroupId": "",
+			"Name": "Breath"
+		},
+		{
+			"Id": "ToggleHair",
+			"GroupId": "ParamGroup",
+			"Name": "Hair Toggle"
+		},
+		{
+			"Id": "ToggleBrows",
+			"GroupId": "ParamGroup",
+			"Name": "Brows Toggle"
+		},
+		{
+			"Id": "ToggleEye",
+			"GroupId": "ParamGroup",
+			"Name": "Eye Toggle"
+		},
+		{
+			"Id": "ToggleNose",
+			"GroupId": "ParamGroup",
+			"Name": "Nose Toggle"
+		},
+		{
+			"Id": "ToggleMouth",
+			"GroupId": "ParamGroup",
+			"Name": "Mouth Toggle"
+		},
+		{
+			"Id": "ToggleTone",
+			"GroupId": "ParamGroup",
+			"Name": "Skin Tone Toggle"
+		},
+		{
+			"Id": "ToggleClothes",
+			"GroupId": "ParamGroup",
+			"Name": "Clothes Toggle"
+		}
+	],
+	"ParameterGroups": [
+		{
+			"Id": "ParamGroup",
+			"GroupId": "",
+			"Name": "Toggles"
+		}
+	],
+	"Parts": [
+		{
+			"Id": "Part41",
+			"Name": "charaWIP.psd"
+		},
+		{
+			"Id": "Part2",
+			"Name": "Face Parts"
+		},
+		{
+			"Id": "Clothes2",
+			"Name": "Clothes"
+		},
+		{
+			"Id": "Part34",
+			"Name": "Body Layers"
+		},
+		{
+			"Id": "Part39",
+			"Name": "Back Hair"
+		},
+		{
+			"Id": "Brows2",
+			"Name": "Brows"
+		},
+		{
+			"Id": "Part3",
+			"Name": "Front Hair"
+		},
+		{
+			"Id": "Mouths2",
+			"Name": "Mouths"
+		},
+		{
+			"Id": "Nose2",
+			"Name": "Nose"
+		},
+		{
+			"Id": "Eyes2",
+			"Name": "Eyes"
+		},
+		{
+			"Id": "Part30",
+			"Name": "Clothes D"
+		},
+		{
+			"Id": "Part31",
+			"Name": "Clothes C"
+		},
+		{
+			"Id": "Part32",
+			"Name": "Clothes B"
+		},
+		{
+			"Id": "Part33",
+			"Name": "Clothes A - Formal"
+		},
+		{
+			"Id": "Part35",
+			"Name": "Arms Color 4"
+		},
+		{
+			"Id": "Part36",
+			"Name": "Arms Color 3"
+		},
+		{
+			"Id": "Part37",
+			"Name": "Arms Color 2"
+		},
+		{
+			"Id": "Part38",
+			"Name": "Arms Color 1"
+		},
+		{
+			"Id": "Part25",
+			"Name": "Eyes D"
+		},
+		{
+			"Id": "Part26",
+			"Name": "Eyes C"
+		},
+		{
+			"Id": "Part27",
+			"Name": "Eyes B"
+		},
+		{
+			"Id": "Part28",
+			"Name": "Eyes A"
+		}
+	]
+}
