@@ -1,6 +1,8 @@
 import React from 'react'
 import './App.css'
-import AddWeezButton from './components/AddWeezButton';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import AddWeez from './pages/AddWeez';
 
 function App() {
 
@@ -8,30 +10,15 @@ function App() {
   return (
     <>
 
-      {/*<section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>*/}
-
-      <div className="bg-red-200">
-        <h1>Hello world</h1>
-        <AddWeezButton></AddWeezButton>
+      <div>
+        <BrowserRouter>
+          <Routes>
+            <Route index element={<HomePage />} />
+            <Route path="/home" element={<HomePage />} />
+            <Route path="/addweez" element={<AddWeez />} />
+          </Routes>
+        
+        </BrowserRouter>
       </div>
       
 

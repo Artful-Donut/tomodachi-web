@@ -1,7 +1,12 @@
 function AddWeez() {
-    <div>
-        ADDING PAGE
-    </div>
+    return(
+        <>
+        <div>
+            <h1>ADDING PAGE</h1>
+        </div>
+        </>
+    )
+    
 }
 
 
