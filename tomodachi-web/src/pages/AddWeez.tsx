@@ -6,6 +6,7 @@ import eyeIcon from '../assets/drawnAssets/eyeButton.png';
 import hairIcon from '../assets/drawnAssets/hairButton.png';
 import mouthIcon from '../assets/drawnAssets/mouthButton.png';
 import noseIcon from '../assets/drawnAssets/noseButton.png';
+import WheezCanvas from '../components/weez/WheezCanvas';
 
 
 function AddWeez() {
@@ -28,7 +29,7 @@ function AddWeez() {
             <CustomizeButton iconsrc={noseIcon} numberid={6}></CustomizeButton>
         </div>
 
-        
+        <WheezCanvas></WheezCanvas>
         
 
 

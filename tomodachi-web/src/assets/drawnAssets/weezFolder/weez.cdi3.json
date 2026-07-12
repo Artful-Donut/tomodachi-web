@@ -47,6 +47,11 @@
 			"Name": "Breath"
 		},
 		{
+			"Id": "ParamHappyWave",
+			"GroupId": "",
+			"Name": "Happy wave"
+		},
+		{
 			"Id": "ToggleHair",
 			"GroupId": "ParamGroup",
 			"Name": "Hair Toggle"
