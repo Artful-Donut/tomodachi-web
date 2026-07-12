@@ -41,10 +41,16 @@ function HomePage() {
 
         if (hunger < 33) {
             setFullnessImg(stomachLow);
+            setBubbleHidden(false);
+            setDialog(['You call this sustenance?', 'GIVE ME MORE!!!!']);
         } else if (hunger < 66) {
             setFullnessImg(stomachMid);
+            setBubbleHidden(false);
+            setDialog(['Light work no reaction!']);
         } else {
+            setBubbleHidden(false);
             setFullnessImg(stomachFull);
+            setDialog(['Ough......', "I'm so full............................."]);
         }
     }
 
