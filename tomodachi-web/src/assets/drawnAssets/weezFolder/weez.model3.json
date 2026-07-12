@@ -5,7 +5,14 @@
 		"Textures": [
 			"weez.2048/texture_00.png"
 		],
-		"DisplayInfo": "weez.cdi3.json"
+		"DisplayInfo": "weez.cdi3.json",
+		"Motions": {
+			"Fed": [
+				{
+					"File": "fed.motion3.json"
+				}
+			]
+		}
 	},
 	"Groups": [
 		{
@@ -18,5 +25,6 @@
 			"Name": "LipSync",
 			"Ids": []
 		}
-	]
+	],
+	"HitAreas": []
 }
