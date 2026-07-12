@@ -15,10 +15,10 @@ function HomePage() {
     const [bubbleHidden, setBubbleHidden] = useState(false);
     const [showMessage, setShowMessage] = useState(true);
         const dialog = [
-            "Hiii",
-            "Byee!!!",
-            "Heyyy!!",
-            "Goodbye!"
+            "Heyyyy great to see you!",
+            "Goodbye, have a nice day!",
+            "You're too nosy. Can you please leave me alone?",
+            "I WILL NEVER TALK TO YOU AGAIN!"
         ];
 
         const toggleMessage = () => setShowMessage((prev) => !prev)
@@ -42,7 +42,7 @@ function HomePage() {
 
         <button
             onClick={toggleMessage}
-            className="absolute items-center justify-center bg-white rounded-full h-24 w-24 mt-12 text-bold text-4xl"
+            className="absolute items-center justify-center bg-white border rounded-full h-24 w-24 mt-12 text-bold text-4xl"
         >
             !!!
         </button>
@@ -50,7 +50,7 @@ function HomePage() {
             <WheezCanvas></WheezCanvas>
         </div>
         {showMessage && (
-            <div className="absolute bg-white text-black rounded-full border ml-36 w-150 h-12 text-bold">
+            <div className="absolute bg-gray-300 text-black rounded-full border ml-36 w-150 h-12 text-bold">
                 I AM BEING NEGLECTED, I WILL CALL THE POLICE IF YOU DON'T FEED ME!!!
             </div>
         )}
