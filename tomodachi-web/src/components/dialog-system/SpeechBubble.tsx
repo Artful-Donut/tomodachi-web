@@ -15,7 +15,7 @@ interface props {
  * Takes a string array and will write each character on screen
  * Users can tap to continue or tap to skip through dialog
  */
-function SpeechBubble({ className, isHidden = true, setIsHidden, speed = 50, dialog}: props) {
+function SpeechBubble({ className, isHidden = true, setIsHidden, speed = 50, dialog }: props) {
     // Typewriter effect: https://www.geeksforgeeks.org/reactjs/how-to-create-typewriter-effect-in-reactjs/
 
     // States for displayed text and current index
@@ -47,6 +47,7 @@ function SpeechBubble({ className, isHidden = true, setIsHidden, speed = 50, dia
         }, speed);
 
         // console.log('SpeechBubble.tsx/Index: ' + index + ' Length: ' + dialog[curDialog].length);
+        if (curDialog == dialog.length) setIsHidden()
         return () => clearInterval(interval);
     }, [index, dialog, curDialog]);
 
