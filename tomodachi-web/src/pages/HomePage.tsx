@@ -4,6 +4,7 @@ import SpeechBubble from "../components/dialog-system/SpeechBubble";
 import WheezCanvas from "../components/weez/WheezCanvas";
 import backgroundPicture from "../assets/drawnAssets/backGround.png";
 import bgMusic from "../assets/music/Puzzle_game.mp3";
+import BackgroundMusic from "../components/BackgroundMusic";
 
 
 function HomePage() {
@@ -13,49 +14,6 @@ function HomePage() {
             
     });
 
-    
-    const BackgroundMusic: React.FC = () => {
-        const [isPlaying, setIsPlaying] = useState(false);
-        const audioRef = useRef<HTMLAudioElement | null>(null);
-
-        // Initialize the audio element once
-        useLayoutEffect(() => {
-        audioRef.current = new Audio(bgMusic);
-        audioRef.current.loop = true;
-
-        return () => {
-            // Clean‑up when the component unmounts
-            if (audioRef.current) {
-                audioRef.current.pause();
-                audioRef.current = null;
-            }
-        };
-        }, []);
-
-        const togglePlay = () => {
-            if (!audioRef.current) return;
-
-            if (isPlaying) {
-                audioRef.current.pause();
-            } else {
-                audioRef.current
-                .play()
-                .catch((err: unknown) => console.error("Audio play failed:", err));
-            }
-        setIsPlaying(!isPlaying);
-    };
-
-    return (
-      <button
-        onClick={togglePlay}
-        className="absolute bottom-4 left-4 bg-white rounded px-3 py-1"
-      >
-        {isPlaying ? "Pause Music" : "Play Music"}
-      </button>
-    );
-  };
-
-    
 
     const [bubbleHidden, setBubbleHidden] = useState(false);
     const [showMessage, setShowMessage] = useState(true);
@@ -68,12 +26,20 @@ function HomePage() {
 
         const toggleMessage = () => setShowMessage((prev) => !prev)
 
+
+
     return(
+
         <>
         
         <div 
             className="bg-contain"
-            style={{backgroundImage: `url(${backgroundPicture})`}}>
+            style={{backgroundImage: `url(${backgroundPicture})`}}
+            
+            >
+            <BackgroundMusic 
+        />
+        
 
         <div className="mt-10">
             <div className="text-black text-4xl">WELCOME HOME</div>
@@ -115,8 +81,8 @@ function HomePage() {
         </div>
 
         </>
-    )
-    
+        
+    )   
 }
 
 
