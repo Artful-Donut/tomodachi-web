@@ -29,7 +29,7 @@ function AddWeez() {
             <CustomizeButton iconsrc={noseIcon} numberid={6}></CustomizeButton>
         </div>
 
-        <WheezCanvas></WheezCanvas>
+        {/**<WheezCanvas></WheezCanvas> */}
         
 
 

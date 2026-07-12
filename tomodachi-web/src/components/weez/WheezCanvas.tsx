@@ -1,6 +1,6 @@
 import { Live2D } from 'live2d-react'
 import { useEffect } from 'react'
-
+import fed from '../../assets/drawnAssets/weezFolder/fed.motion3.json'
 interface Props {
     selectedFood?: string;
     setSelectedFood: () => void;
@@ -17,11 +17,13 @@ function WheezCanvas({ selectedFood, setSelectedFood }: Props) {
     return (
         <div>
             {selectedFood ? (
-                <img className='absolute' src={selectedFood} alt='a food' />
+                <img className='absolute w-24 h-24' src={selectedFood} alt='a food' />
             ) : null}
 
             <Live2D
                 className='w-full h-full'
+                idleMotionGroup='fed'
+                tapBodyMotionGroup='fed'
                 modelJsonPath={modelJsonUrl}
                 coreScriptSrc="/live2dcubismcore.min.js"
                 renderOptions={{

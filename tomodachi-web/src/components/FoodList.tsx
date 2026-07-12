@@ -5,7 +5,7 @@ import soup from '../assets/img/toxic_sludge.jpg';
 import rock from '../assets/img/uranium.jpg';
 
 interface Props {
-    setSelectedFood: React.Dispatch<(prevState: string) => string>
+    setSelectedFood: React.Dispatch<React.SetStateAction<string | undefined>>
 }
 function FoodList({ setSelectedFood }: Props) {
     const foods = [horse, snail, soup, rock];
@@ -13,7 +13,7 @@ function FoodList({ setSelectedFood }: Props) {
 
         <div className='flex justify-around bg-amber-100'>
             {foods.map((src, index) => {
-                return (<button className='w-1/12 hover:cursor-pointer'
+                return (<button key={index} className='w-1/12 hover:cursor-pointer'
                 onClick={() => setSelectedFood((prevSource) => src)}>
                     <img src={src} />
                 </button>)
