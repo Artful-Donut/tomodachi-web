@@ -29,6 +29,7 @@ function SpeechBubble({ className, isHidden = true, setIsHidden, speed = 50, dia
 
     // Effect for writing text
     useEffect(() => {
+        console.log('SpeechBubble.tsx/useEffect(): Dialog: ' + dialog);
         if (!dialog || curDialog >= dialog.length) {
             resetDialog();
             return;
@@ -56,7 +57,7 @@ function SpeechBubble({ className, isHidden = true, setIsHidden, speed = 50, dia
 
     function handleNextDialog() {
         console.log('SpeechBubble.tsx/handleNextDialog(): CurDialog / Dialog Length: ' + curDialog + "/" + dialog.length);
-        console.log('SpeechBubble.tsx/handleNextDialog(): Dialog: ' + dialog);
+        
         if (!dialog) {
             resetDialog();
             return;
