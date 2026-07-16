@@ -27,14 +27,6 @@ function SpeechBubble({ className, isHidden = true, setIsHidden, speed = 50, dia
 
     // const [isDone, setIsDone] = useState(false);
 
-    // Effect for Dialog
-    useEffect(() => {
-        if (!dialog) {
-            resetDialog();
-            return;
-        }
-    }, dialog)
-
     // Effect for writing text
     useEffect(() => {
         if (!dialog || curDialog >= dialog.length) {
@@ -60,10 +52,11 @@ function SpeechBubble({ className, isHidden = true, setIsHidden, speed = 50, dia
 
         // console.log('SpeechBubble.tsx/Index: ' + index + ' Length: ' + dialog[curDialog].length);
         return () => clearInterval(interval);
-    }, [index, curDialog]);
+    }, [index, curDialog, dialog]);
 
     function handleNextDialog() {
-        console.log('SpeechBubble.tsx/handleNextDialog(): CurDialog / Dialog Length: ' + curDialog + "/" + dialog.length)
+        console.log('SpeechBubble.tsx/handleNextDialog(): CurDialog / Dialog Length: ' + curDialog + "/" + dialog.length);
+        console.log('SpeechBubble.tsx/handleNextDialog(): Dialog: ' + dialog);
         if (!dialog) {
             resetDialog();
             return;
