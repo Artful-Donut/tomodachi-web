@@ -20,7 +20,7 @@ function HomePage() {
     });
 
 
-    const [bubbleHidden, setBubbleHidden] = useState(false);
+    const [showDialog, setShowDialog] = useState(false);
     const [showMessage, setShowMessage] = useState(true);
     const [dialog, setDialog] = useState([
         "Heyyyy great to see you!",
@@ -41,41 +41,42 @@ function HomePage() {
 
         if (hunger < 33) {
             setFullnessImg(stomachLow);
-            setBubbleHidden(false);
+            setShowDialog(false);
             setDialog(['You call this sustenance?', 'GIVE ME MORE!!!!']);
         } else if (hunger < 66) {
             setFullnessImg(stomachMid);
-            setBubbleHidden(false);
+            setShowDialog(false);
             setDialog(['Light work no reaction!']);
         } else {
-            setBubbleHidden(false);
+            setShowDialog(false);
             setFullnessImg(stomachFull);
             setDialog(['Ough......', "I'm so full............................."]);
         }
     }
 
 
-
-
     return (
         <>
 
             <div
-                className="bg-contain"
-                style={{ backgroundImage: `url(${backgroundPicture})` }}>
-                <BackgroundMusic/>
+                className="relative bg-cover size-screen"
+                style={{
+                    backgroundImage: `url(${backgroundPicture})`, 
+                }}>
+                <BackgroundMusic />
 
-                <div id='Feeding Area' className='flex h-1/6 justify-around rounded-b-2xl bg-amber-50'>
-                    <img className="w-1/8 p-2" src={fullnessImg} alt="a picture of a stomach" />
-                    <button className='w-1/6 bg-amber-600 hover:cursor-pointer' onClick={() => setShowFoodList((prev) => !prev)}>
-                        <h1>Feed</h1>
-                    </button>
+                <div className="absolute top-[-20]">
+                    <div id='FeedingStyling' className="flex-col bg-amber-50 rounded-b-2xl">
+                        <div id='feedBar' className="flex justify-around content-baseline">
+                            <img className="w-1/8 p-2" src={fullnessImg} alt="a picture of a stomach" />
+                            <button className='w-1/6 my-2 bg-amber-600 hover:cursor-pointer' onClick={() => setShowFoodList((prev) => !prev)}>
+                                <h1>Feed</h1>
+                            </button>
+                        </div>
+                        {showFoodList &&
+                            <FoodList className='' setSelectedFood={setSelectedFood} />}
+                    </div>
                 </div>
-                {showFoodList &&
-                    <FoodList setSelectedFood={setSelectedFood}
-                    >
-
-                    </FoodList>}
 
 
 
@@ -97,10 +98,10 @@ function HomePage() {
                     </div>
                 )*/}
 
-                <div className="">
+                <div className="absolute left-0 right-0 bottom-0">
                     <SpeechBubble
-                        isHidden={bubbleHidden}
-                        setIsHidden={() => setBubbleHidden(true)}
+                        isHidden={showDialog}
+                        setIsHidden={setShowDialog}
                         dialog={dialog}
                         speed={40}
 

@@ -4,7 +4,7 @@ import { MdNavigateNext } from "react-icons/md";
 interface props {
     className?: string,
     isHidden: boolean,
-    setIsHidden: () => void,
+    setIsHidden: React.Dispatch<React.SetStateAction<boolean>>,
     speed?: number,
     dialog: string[],
 }
@@ -27,8 +27,20 @@ function SpeechBubble({ className, isHidden = true, setIsHidden, speed = 50, dia
 
     // const [isDone, setIsDone] = useState(false);
 
+    // Effect for Dialog
+    useEffect(() => {
+        if (!dialog) {
+            resetDialog();
+            return;
+        }
+    }, dialog)
+
     // Effect for writing text
     useEffect(() => {
+        if (!dialog || curDialog >= dialog.length) {
+            resetDialog();
+            return;
+        }
         // console.log('SpeechBubble.tsx/useEffect is running');
         // console.log('SpeechBubble.tsx/useEffect current dialog index: ' + curDialog);
         const interval = setInterval(() => {
@@ -47,14 +59,18 @@ function SpeechBubble({ className, isHidden = true, setIsHidden, speed = 50, dia
         }, speed);
 
         // console.log('SpeechBubble.tsx/Index: ' + index + ' Length: ' + dialog[curDialog].length);
-        if (curDialog == dialog.length) setIsHidden()
         return () => clearInterval(interval);
-    }, [index, dialog, curDialog]);
+    }, [index, curDialog]);
 
     function handleNextDialog() {
+        console.log('SpeechBubble.tsx/handleNextDialog(): CurDialog / Dialog Length: ' + curDialog + "/" + dialog.length)
+        if (!dialog) {
+            resetDialog();
+            return;
+        }
         if (!isSpeaking) {
-            if (curDialog == dialog.length - 1) {
-                setIsHidden();
+            if (curDialog >= dialog.length) {
+                resetDialog();
             } else {
                 setDisplayedText('');
                 setIndex(0);
@@ -66,6 +82,14 @@ function SpeechBubble({ className, isHidden = true, setIsHidden, speed = 50, dia
             setIndex(dialog[curDialog].length);
             setIsSpeaking(false);
         }
+    }
+    function resetDialog() {
+        setDisplayedText('');
+        setIndex(0);
+        setCurDialog(0);
+        setIsSpeaking(true);
+
+        setIsHidden(true);
     }
 
     return (
